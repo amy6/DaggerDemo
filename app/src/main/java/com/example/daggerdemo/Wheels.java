@@ -1,10 +1,13 @@
 package com.example.daggerdemo;
 
-import javax.inject.Inject;
-
 class Wheels {
 
-    @Inject
-    public Wheels() {
+    private Rims rims;
+    private Tyres tyres;
+
+    public Wheels(Rims rims, Tyres tyres) {
+        this.rims = rims;
+        this.tyres = tyres;
     }
+
 }
