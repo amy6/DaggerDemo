@@ -7,19 +7,19 @@ import dagger.Provides;
 public class WheelsModule {
 
     @Provides
-    Rims provideRims() {
+    static Rims provideRims() {
         return new Rims();
     }
 
     @Provides
-    Tyres provideTyres() {
+    static Tyres provideTyres() {
         Tyres tyres = new Tyres();
         tyres.inflate();
         return tyres;
     }
 
     @Provides
-    Wheels provideWheels(Rims rims, Tyres tyres) {
+    static Wheels provideWheels(Rims rims, Tyres tyres) {
         return new Wheels(rims, tyres);
     }
 }
