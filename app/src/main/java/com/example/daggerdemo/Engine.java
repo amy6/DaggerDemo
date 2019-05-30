@@ -1,10 +1,7 @@
 package com.example.daggerdemo;
 
-import javax.inject.Inject;
+public interface Engine {
 
-public class Engine {
+    void start();
 
-    @Inject
-    public Engine() {
-    }
 }
