@@ -10,12 +10,14 @@ import dagger.Module;
 public class PetrolEngine implements Engine {
 
     private static final String TAG = "PetrolEngine";
+    private final int horsePower;
 
     @Inject
-    public PetrolEngine() {
+    public PetrolEngine(int horsePower) {
+        this.horsePower = horsePower;
     }
 
     @Override public void start() {
-        Log.d(TAG, "Petrol engine started");
+        Log.d(TAG, "Petrol engine started. Horsepower: " + horsePower);
     }
 }
