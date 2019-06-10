@@ -1,5 +1,7 @@
 package com.example.daggerdemo;
 
+import javax.inject.Named;
+
 import dagger.BindsInstance;
 import dagger.Component;
 
@@ -15,7 +17,10 @@ public interface CarComponent {
     interface Builder {
 
         @BindsInstance
-        Builder horsePower(int horsePower);
+        Builder horsePower(@Named("horse power") int horsePower);
+
+        @BindsInstance
+        Builder engineCapacity(@Named("engine capacity") int engineCapacity);
 
         CarComponent build();
 
