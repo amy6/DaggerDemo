@@ -1,19 +1,16 @@
 package com.example.daggerdemo;
 
-import javax.inject.Named;
-
-import dagger.BindsInstance;
-import dagger.Component;
+import dagger.Subcomponent;
 
 @PerActivity
-@Component(dependencies = AppComponent.class, modules = {WheelsModule.class, PetrolEngineModule.class})
+@Subcomponent(modules = {WheelsModule.class, DieselEngineModule.class})
 public interface ActivityComponent {
 
     Car getCar();
 
     void inject(MainActivity mainActivity);
 
-    @Component.Builder
+    /*@Component.Builder
     interface Builder {
 
         @BindsInstance
@@ -25,5 +22,5 @@ public interface ActivityComponent {
         Builder appComponent(AppComponent appComponent);
 
         ActivityComponent build();
-    }
+    }*/
 }

@@ -8,5 +8,5 @@ import dagger.Component;
 @Component(modules = DriverModule.class)
 public interface AppComponent {
 
-    Driver getDriver();
+    ActivityComponent getActivityComponent(DieselEngineModule dieselEngineModule);
 }
